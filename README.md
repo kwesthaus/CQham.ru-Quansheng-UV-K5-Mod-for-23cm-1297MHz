@@ -6,11 +6,31 @@ Accessed using proxy, as [CQHam.ru now restricts access to Russian IP blocks](ht
 Translated using Google Translate web on 2026 Oct. 6th
 
 # LZ3HD Development Sequence
-* v1: Q_MOD_1297_MHz_MOD_XX.jpg, Screenshot_2025-01-18_205930.jpg
-* v2: V2_MOD_L2.png, V1_MOD_L1b.png, https://www.youtube.com/watch?v=j2hYy455Tak
-* v2.1: V2_MOD_L3a.png, V2_MOD_L3b.png
-* v2.2: DSC_3310_MOD_3.png
-* v2.3: V3_MOD_L3a.png, V3_MOD_L4b_m.png
+* [v1](#lz3hd-3): Just implementing XENOMORPH's mod
+    * Skip the pre-driver amp
+    * Bypass the band-switchable inductance between the pre-driver and the main driver amp
+    * Completely remove the VHF TX filter path
+    * Simplify some switching for the UHF TX path
+    * Tune various parts of the circuit for 23cm instead of 70cm
+* [v2.0](#lz3hd-4): Major change
+    * Increase gate voltage of main RF driver for more power
+    * Modify TX/RX switching
+    * Only MOSFET for UHF TX switching, skip the DTC transistors?
+    * Simplify some switching for the UHF RX path
+    * Completely disconnect the VHF RX LNA+filter path
+    * Improve tuning
+        * Different output filter
+            * Swap inductors
+        * Different transistor matching network
+* [v2.1](#lz3hd-7): Minor tuning tweaks
+    * Adjust component values/sizes
+    * Short part of the hairpin matching trace (the "S" shape on the PCB)
+* [v2.2](#lz3hd-13): "reduce the power drop-off caused by the output transistor heating up"
+    * Actually don't remove the pre-driver amp, leave it in place and:
+        * Adjust the inter-stage matching between the pre-driver and the main driver amp
+        * Reinstate the connection between the UHF TX select switching transistors and the pre-driver
+* [v2.3](#lz3hd-14): Minor tuning tweaks
+    * Adjust value of 2 capacitors
 
 The last images seem cumulative, i.e. you shouldn't need to do all the changes in V2_MOD_L3a then all the changes in DSC_3310_MOD3 then all the changes in V3_MOD_L3a, you should just be able to do all the changes in V3_MOD_L3a.
 Also V3_MOD_L4b_m is unfortunately a low-res version, but fortunately it's the same as V2_MOD_L3b
