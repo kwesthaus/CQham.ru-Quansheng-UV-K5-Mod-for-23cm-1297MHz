@@ -35,6 +35,144 @@ Translated using Google Translate web on 2026 Oct. 6th
 The last images seem cumulative, i.e. you shouldn't need to do all the changes in V2_MOD_L3a then all the changes in DSC_3310_MOD3 then all the changes in V3_MOD_L3a, you should just be able to do all the changes in V3_MOD_L3a.
 Also V3_MOD_L4b_m is unfortunately a low-res version, but fortunately it's the same as V2_MOD_L3b
 
+## Component Changes (for LZ3HD v2.3)
+### Frontside of PCB
+* UHF TX filter
+    * Replace SOD323 diode with 0R 0603 resistor
+    * Replace 8.2p 0603 capacitor with 2.5p 0603 capacitor
+    * Replace 5.1p 0603 capacitor with 4p 0603 capacitor
+    * Replace 3p 0603 capacitor with 2.5p 0603 capacitor
+    * Remove 470p 0603 capacitor
+    * Replace 470p 0603 capacitor with 100p 0603 capacitor
+    * Adjust/trim 4x air-core inductors in place
+    * Remove 1p 0603 capacitor
+    * Replace 2p 0603 capacitor with 4p 0603 capacitor
+    * Remove 1206 wire-wound inductor
+    * Remove 6.8p 0603 capacitor
+    * Remove 470p 0603 capacitor
+    * Replace 470p 0603 capacitor with 100p 0603 capacitor
+    * Replace SOD323 diode with 0R 0603 resistor
+        * Remove unknown component next to/in parallel with this diode as well. Appears to not be present on v1.4 circuit boards
+    * Remove 100n 0805 inductor
+    * Remove 180p 0603 capacitor (if present)
+    * Remove 180p 0603 capacitor (if present)
+    * Replace 180p 0603 capacitor with 0R 0603 resistor
+    * Add 10p 0603 capacitor
+    * Add 5.6p 0603 capacitor
+    * Add 2x 0R 0402 resistors
+* VHF TX filter
+    * Remove all (not listing individually)
+* Power supply RF choke
+    * Adjust/trim air-core inductor in place
+* TX/RX switching and output filter
+    * Remove
+        * 1u 0603 inductor
+        * 470p 0402 capacitor
+        * 2x SOD323 diodes
+        * 3.3k 0402 resistor
+        * 470p 0603 capacitor
+        * 470p 0402 capacitor
+        * 3p 0402 capacitor
+    * Add
+        * 1.5p ?? capacitor
+        * 100p ?? capacitor
+        * 5x 0R 0603 resistors
+        * 2x 1.8p ?? capacitors
+        * Air-core inductor
+    * Adjust/trim air-core inductor in place
+    * Cut PCB trace
+* Interstage: main driver amp to final amp
+    * Replace 1u 0603 inductor with 10n 0805 wirewound inductor
+    * Replace 470p 0603 capacitor with 0R 0603 resistor
+    * Replace ? 0603 inductor with 0R 0603 resistor
+    * Remove 22p 0603 capacitor
+    * Remove 1n 0603 capacitor
+    * Remove 2x SOD523 diodes
+    * Remove 100n 0603 inductor
+    * Replace 47R 0402 resistor with 2.2k 0402 resistor
+    * Replace 5.1p 0402 capacitor with 3.9p 0402 capacitor
+    * Replace 1n 0603 capacitor with 2.2p 0603 capacitor
+* Interstage: pre-driver to main driver amp
+    * Replace 16p 0603 capacitor with 12p 0603 capacitor
+    * Add 3.3n 0603 wirewound inductor
+    * Add 5.6p 0805 capacitor
+* Gate voltage for main driver amp
+    * Replace 100k 0402 resistor with 60k 0402 resistor
+    * Replace 100R 0402 resistor with 2.2k 0402 resistor
+* TX band switching
+    * Remove 110n 0603 inductor
+    * Replace SOD323 diode with 0R 0805 resistor
+* UHF RX filter
+    * Replace 11n 2.5x2x1mm inductor with 2.2p 0603 capacitor
+    * Add 0.5p 0603 capacitor
+    * Add 3.3n 0402 wirewound inductor
+    * Remove one of 0402 cap or resistor, not sure which
+    * Replace 470p 0402 capacitor with 2.2p 0402 capacitor
+    * Replace 22n 0603 inductor with 3.3n 0603 wirewound inductor
+    * Replace 15p 0402 capacitor with 1.5p 0402 capacitor
+    * Replace 3p 0402 capacitor with 3.3n 0402 wirewound inductor
+    * Replace 20n 0603 inductor with 6.8p 0603 capacitor
+    * Replace 15n 0402 inductor with 0R 0402 resistor
+    * Replace 15p 0402 capacitor with 0R 0402 resistor
+    * Remove 1k 0402 resistor
+    * Remove 3.3k 0402 resistor
+    * Remove 4.7u 0603 inductor
+    * Remove 120n 0402 capacitor
+    * Ensure ? 0402 capacitor is removed
+    * Replace SOD523 diode with 0R 0603 resistor
+* VHF RX filter
+    * Remove 55.6n 0603 inductor
+    * Remove SOD523 diode
+
+### Backside of PCB
+* Output filter
+    * Replace 4.7u 0805 inductor with 55.6n 0603 inductor
+* TX/RX switching
+    * Remove 3.3k 0402 resistor
+    * Remove 0603 ferrite bead
+* FM receiver
+    * Remove SOT416 transistor
+
+## Parts List
+
+### Reused on board
+| Component Type | Package | Value |
+|----------------|---------|-------|
+| Capacitor | 0603 | 6.8p, 12p |
+| Air-core inductor | 2.5x2x1mm | Manually adjusted |
+| Inductor | 0603 | 55.6n |
+
+### Need to obtain from elsewhere
+| Component Type | Package | Value |
+|----------------|---------|-------|
+| Capacitor | 0805 | 5.6p |
+| Capacitor | 0603 | 0.5p, 2x 2.2p, 2x 2.5p, 2x 4p, 5.6p, 10p, 2x 100p
+| Capacitor | 0402 | 1.5p, 2.2p, 3.9p |
+| Capacitor | TBD | 1.5p, 2x 1.8p, 100p |
+| Wirewound inductor | 0805 | 10n |
+| Wirewound inductor | 0603 | 2x 3.3n |
+| Wirewound inductor | 0402 | 2x 3.3n |
+| Resistor | 0805 | 0R |
+| Resistor | 0603 | 11x 0R |
+| Resistor | 0402 | 4x 0R, 2x 2.2k, 60k |
+
+### Leftover/spare after mod is done
+| Component Type | Package | Value |
+|----------------|---------|-------|
+| Diode | SOD323 | 8x ? |
+| Diode | SOD523 | 4x ? |
+| Capacitor | 0603 | 1p, 2p, 3p, 5.1p, 8.2p, 12p, 15p, 4x 16p, 22p, 68p, 180p, 7x 470p, 3x 1n |
+| Capacitor | 0402 | 2x 3p, 5.1p, 2x 15p, 3x 470p, 120n |
+| Air-core inductor | 2.5x2x1mm | 5x ? |
+| Wirewound inductor | 1206 | 1x ? |
+| Inductor | 0805 | 2x 100n, 4.7u |
+| Inductor | 0603 | 1x ?, 20n, 22n, 100n, 110n, 2x 1u, 4.7u
+| Inductor | 0402 | 15n |
+| Resistor | 0603 | 100R |
+| Resistor | 0402 | 47R, 100R, 1k, 3x 3.3k, 100k |
+| Ferrite bead | 0603 | 1x ? |
+| Transistor | SOT416 | 1x ? |
+
 ## Rework Steps from youtube
 
 This is definitely not all the modifications from a fresh radio to v2, so maybe this is just the differences from v1? or from XENOMORPH's original mod?
