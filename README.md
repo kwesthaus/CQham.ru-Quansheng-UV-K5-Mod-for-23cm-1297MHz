@@ -56,7 +56,7 @@ To tune the transmitter, connect a spectrum analyzer (with an external attenuato
 The three power levels can be adjusted in the configuration file as described above (launch the k5prog_win_v1.26 software, turn on the radio, connect via the appropriate COM port, click "Read Calibration," save the file, and then edit the power values—specifically the transistor quiescent current—if necessary).
 Inductors (loops) made from silver-plated cable strands.
 After modification, the sensitivity is -122dBm and the maximum power is 30dBm (with precise tuning).
-![Q_MOD_1297_MHz.jpg](Q_MOD_1297_MHz.jpg)
+![Q_MOD_1297_MHz.jpg](images/Q_MOD_1297_MHz.jpg)
 
 ## XENOMORPH
 12.12.2023, 20:27
@@ -354,8 +354,8 @@ If you can't upload it directly to the forum, please provide a link.
 Since I couldn't get the transmitter running, I had to ask my friend LZ5HP for help. After a few hours of struggling with it, we managed to get an output of 0.8–1.2 W, though there are still some nuances that require further work. At this stage, the board looks pretty messy and isn't exactly "photogenic." I’ll take photos once everything is finished.
 There is also a capacitor listed here that slightly improves receiver sensitivity (it should be replaced with a 1.5pF one or removed).
 
-![Q_MOD_1297_MHz_MOD_XX.jpg](Q_MOD_1297_MHz_MOD_XX.jpg)
-![Screenshot_2025-01-18_205930.jpg](Screenshot_2025-01-18_205930.jpg)
+![Q_MOD_1297_MHz_MOD_XX.jpg](images/Q_MOD_1297_MHz_MOD_XX.jpg)
+![Screenshot_2025-01-18_205930.jpg](images/Screenshot_2025-01-18_205930.jpg)
 
 ## LZ3HD
 08.02.2025, 23:42
@@ -366,53 +366,53 @@ I would like to extend special thanks to the author of this thread for the desig
 
 We ended up with a slightly different hardware modification: receiver filtering for mobile networks was improved, and—consequently—the transmitter features a different transistor matching network, a different output filter, and a modified RX/TX switching circuit. These changes resulted in higher output power and the elimination of harmonics. The transmitter output is 1.48 W at 8 V, and the receiver squelch triggers at -122 to -123 dBm. Measurements were performed using a tinySA ULTRA with an external 40 dB attenuator.
 
-![V2_MOD_L2.png](V2_MOD_L2.png)
+![V2_MOD_L2.png](images/V2_MOD_L2.png)
 Download: https://disk.yandex.ru/i/P4bgQ2KHIiCpgQ
 
 To increase the output power (beyond 1 W), the gate voltage of the driver transistor must be raised; however, the drain current must not exceed 400–450 mA (the transistor's maximum current is 0.5 A). This procedure is risky, as the current could spike suddenly and destroy the transistor. In the photo, this is the '60k' resistor; I installed a 150k resistor in parallel with the existing 100k one. The resulting drain current was 460 mA at an 8.4 V supply voltage. There is no need to replace the BAR64 diodes and the BFR360 transistor; the original components are suitable.
 
-![V2_MOD_L1b.png](V2_MOD_L1b.png)
+![V2_MOD_L1b.png](images/V2_MOD_L1b.png)
 Download: https://disk.yandex.ru/i/ktvO4MdAWnDtRg
 
-![DSC_2769.png](DSC_2769.png)
+![DSC_2769.png](images/DSC_2769.png)
 Download: https://disk.yandex.ru/i/L7BpV5_XfteahA
 
 Desolder coil '1' and install coil '2' in its place (see below).
 
-![DSC_2770.png](DSC_2770.png)
+![DSC_2770.png](images/DSC_2770.png)
 Download: https://disk.yandex.ru/i/fqr8DJ0itcgsuQ
 
 ---
 
-![DSC_2933_MOD.png](DSC_2933_MOD.png)
+![DSC_2933_MOD.png](images/DSC_2933_MOD.png)
 Download: https://disk.yandex.ru/i/6iZYFPjwkdL4Zg
 
 Here, the bus needs to be cut to implement the new RX-TX switching scheme.
 
 ---
 
-![DSC_2935_R.jpg](DSC_2935_R.jpg)
+![DSC_2935_R.jpg](images/DSC_2935_R.jpg)
 Download: https://disk.yandex.ru/i/qeNZW0Erw-wItg
 
 Finished product, top view.
 
 ---
 
-![DSC_2937_R.jpg](DSC_2937_R.jpg)
+![DSC_2937_R.jpg](images/DSC_2937_R.jpg)
 Download: https://disk.yandex.ru/i/QnRQFZ2q1UmSQw
 
 Finished product: bottom view.
 
 ---
 
-![PWR_1.png](PWR_1.png)
+![PWR_1.png](images/PWR_1.png)
 Download: https://disk.yandex.ru/i/tVAPloum_6-tuw
 
 Output power: 31.7 dBm (-8.3 dBm + 40 dB attenuator), 8 V. No harmonics are observed in the 1 GHz to 4 GHz range.
 
 ---
 
-![RX.png](RX.png)
+![RX.png](images/RX.png)
 Download: https://disk.yandex.ru/i/mHP0_Je9HAGmuQ
 
 The squelch opens at -122 to -123 dBm.
@@ -457,39 +457,39 @@ https://www.youtube.com/embed/_GHSqaMAtc0?wmode=opaque
 
 When it comes to harmonics, everything is perfectly in tune:
 
-![DSC_3168r.png](DSC_3168r.png)
+![DSC_3168r.png](images/DSC_3168r.png)
 
 ---
 
 Repeater:
 
-![DSC_3177r.png](DSC_3177r.png)
+![DSC_3177r.png](images/DSC_3177r.png)
 
 ---
 
 Filters (+LNA):
 
-![viber_image_2025-03-30_19-03-30-258.jpg](viber_image_2025-03-30_19-03-30-258.jpg)
-![viber_image_2025-03-30_19-03-46-891.jpg](viber_image_2025-03-30_19-03-46-891.jpg)
-![viber_image_2025-04-27_19-21-16-985.jpg](viber_image_2025-04-27_19-21-16-985.jpg)
-![DSC_3160r.jpg](DSC_3160r.jpg)
-![viber_image_2025-04-27_16-51-04-353.jpg](viber_image_2025-04-27_16-51-04-353.jpg)
+![viber_image_2025-03-30_19-03-30-258.jpg](images/viber_image_2025-03-30_19-03-30-258.jpg)
+![viber_image_2025-03-30_19-03-46-891.jpg](images/viber_image_2025-03-30_19-03-46-891.jpg)
+![viber_image_2025-04-27_19-21-16-985.jpg](images/viber_image_2025-04-27_19-21-16-985.jpg)
+![DSC_3160r.jpg](images/DSC_3160r.jpg)
+![viber_image_2025-04-27_16-51-04-353.jpg](images/viber_image_2025-04-27_16-51-04-353.jpg)
 
 ---
 
 Amplifier:
 
-![DSC_3173r.jpg](DSC_3173r.jpg)
+![DSC_3173r.jpg](images/DSC_3173r.jpg)
 
 ---
 
 P.S. Regarding the QUANSHENG modification: you can improve sensitivity to -124 dBm and increase the power output to... (I won't specify the exact figure, as it depends on the batch, the PCB, and the phase of the moon), but it is worth doing:
 (Changes are marked in red)
 
-![V2_MOD_L3a.png](V2_MOD_L3a.png)
+![V2_MOD_L3a.png](images/V2_MOD_L3a.png)
 Download: https://disk.yandex.ru/i/sBwYRXI5F_P_SQ
 
-![V2_MOD_L3b.png](V2_MOD_L3b.png)
+![V2_MOD_L3b.png](images/V2_MOD_L3b.png)
 Download: https://disk.yandex.ru/i/FLBCueQgTu6U3w
 
 Last edited by LZ3HD; 12.05.2025 at 15:17.
@@ -577,7 +577,7 @@ A number of previously modified Quansheng units were reflashed with the new firm
 While I'm at it, I'll mention another hardware modification: it doesn't increase peak output power, but it significantly reduces the power drop-off caused by the output transistor heating up.
 This mod utilizes that same original transistor which was previously removed because its gain wasn't needed.
 
-![DSC_3310_MOD_3.png](DSC_3310_MOD_3.png)
+![DSC_3310_MOD_3.png](images/DSC_3310_MOD_3.png)
 Download: https://disk.yandex.ru/i/oOSiCR6hSSqIUA
 
 ## LZ3HD
@@ -587,12 +587,12 @@ There, it’s now perfectly flat from 1240 to 1300 MHz. Two capacitors were upgr
 I don't think there will be any further changes, as everything is now properly set up. Of course, the output power can—and should—be calibrated (line 0D0; the author explained how on the first page), since the factory settings aren't suitable for our needs. Here is how I set mine: L – (20 dBm) 0.1 W, M – (27 dBm) 0.5 W, H – (32 dBm) 1.58 W. Without calibration, the values ​​are roughly: L – (27 dBm) 0.5 W, M – (31 dBm) 1.26 W, H – (32 dBm) 1.58 W.
 Here are all the images and the full revision history (marked in red):
 
-![V3_MOD_L3a.png](V3_MOD_L3a.png)
+![V3_MOD_L3a.png](images/V3_MOD_L3a.png)
 Download: https://disk.yandex.ru/i/fRIlg_ajOAm1QQ
 
-![DSC_3309.jpg](DSC_3309.jpg)
+![DSC_3309.jpg](images/DSC_3309.jpg)
 Download: https://disk.yandex.ru/i/xc0g9Or50LM3Hw
 
-![V3_MOD_L4b_m.png](V3_MOD_L4b_m.png)
+![V3_MOD_L4b_m.png](images/V3_MOD_L4b_m.png)
 Download: https://disk.yandex.ru/i/fcQ9QfFDWocF1A
 
